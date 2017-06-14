@@ -2,16 +2,14 @@ My first Go language program to find the longest compound word in the given list
 
 The program uses trie based solution to find the longest compound word. The algorithm is:
 - Create a trie with all the words from the list
-- for each word in list {
--    Using trie, find if the word starts with any existing words as prefixes
--    if only one full match word is found, then it is not a compound word
--    if more than one prefix found {
--         for each such prefix, find recursively if the remaining string of 
-          the word is a complete word or starts with some other existing words.
--         if last remaining string of word is a complete existing word in the 
-          trie, then the initial word is a compound word
--    }
-- } 
+- for each word in the list {
+   * Using trie, find if the word starts with any existing words as prefixes
+   * if only one full match word is found, then it is not a compound word
+   * if more than one prefix found {
+       * for each such prefix, find recursively if the remaining string of the word is a complete word or starts with some other existing words.
+       * if last remaining string of word is a complete existing word in the trie, then the initial word is a compound word
+   * }
+- }
 
 How to run this program:
 1. Set your GOPATH to the absolute path of .../quiz/longestcompound folder
